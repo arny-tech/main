@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARNYTECH - Segurança Cibernética</title>
+  <style>
+    :root {
+      --bg-color: #000;
+      --primary-color: #00ff88;
+      --text-color: #fff;
+      --accent-color: #111;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--accent-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--primary-color);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--text-color);
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    .service-card {
+      background-color: var(--accent-color);
+      border: 1px solid var(--primary-color);
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--primary-color);
+    }
+
+    .service-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 2rem;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ARNYTECH</div>
+    <nav>
+      <a href="#empresa">Empresa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Proteja sua empresa contra ameaças digitais</h1>
+    <p>Na ARNYTECH oferecemos serviços especializados de Pentest e Scan de Vulnerabilidades, identificando e mitigando riscos antes que virem problemas reais.</p>
+  </section>
+
+  <section class="services" id="servicos">
+    <div class="service-card">
+      <h3>Pentest Profissional</h3>
+      <p>Simulações reais de ataques para identificar falhas de segurança nos seus sistemas, redes e aplicações.</p>
+    </div>
+    <div class="service-card">
+      <h3>Scan de Vulnerabilidades</h3>
+      <p>Mapeamento automático de vulnerabilidades, com relatórios completos e recomendações de correção.</p>
+    </div>
+    <div class="service-card">
+      <h3>Consultoria em Segurança</h3>
+      <p>Orientamos sua empresa a implementar as melhores práticas de segurança da informação.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ARNYTECH - Todos os direitos reservados. | contato@arnytech.com</p>
+  </footer>
+</body>
+</html>
