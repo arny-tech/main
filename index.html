@@ -1,152 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARNYTECH - Segurança Cibernética</title>
-  <style>
-    :root {
-      --bg-color: #000;
-      --primary-color: #00ff88;
-      --text-color: #fff;
-      --accent-color: #111;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARNYTECH - Segurança Cibernética</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2e8a1c4db.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
+        .brand-font {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: #00ff88;
+        }
 
-    header {
-      background-color: var(--accent-color);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--primary-color);
-    }
+        .hero {
+            background: linear-gradient(to right, #000000, #003322);
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-    .logo {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      font-weight: bold;
-    }
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #00ff88;
+        }
 
-    nav a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: color 0.3s;
-    }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
 
-    nav a:hover {
-      color: var(--primary-color);
-    }
+        section {
+            padding: 80px 20px;
+        }
 
-    .hero {
-      padding: 5rem 2rem;
-      text-align: center;
-    }
+        .section-title {
+            color: #00ff88;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
+        .service-box {
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            background-color: #111;
+        }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+        .service-box:hover {
+            background-color: #002211;
+            transform: scale(1.03);
+        }
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 4rem 2rem;
-    }
+        footer {
+            background-color: #000000;
+            padding: 30px;
+            text-align: center;
+            color: #999999;
+        }
 
-    .service-card {
-      background-color: var(--accent-color);
-      border: 1px solid var(--primary-color);
-      padding: 2rem;
-      border-radius: 1rem;
-      width: 300px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+        .logo-placeholder {
+            width: 40px;
+            height: 40px;
+            background-color: #00ff88;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
 
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px var(--primary-color);
-    }
-
-    .service-card h3 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-
-    footer {
-      background-color: #111;
-      padding: 2rem;
-      text-align: center;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        .nav-link {
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">ARNYTECH</div>
-    <nav>
-      <a href="#empresa">Empresa</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-placeholder"></div>
+                <span class="brand-font ms-2">ARNYTECH</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Proteja sua empresa contra ameaças digitais</h1>
-    <p>Na ARNYTECH oferecemos serviços especializados de Pentest e Scan de Vulnerabilidades, identificando e mitigando riscos antes que virem problemas reais.</p>
-  </section>
+    <!-- Hero -->
+    <div class="hero">
+        <div class="container">
+            <h1>Protegendo o seu mundo digital</h1>
+            <p>Serviços avançados de Pentest e Scan de Vulnerabilidades para empresas que levam segurança a sério.</p>
+        </div>
+    </div>
 
-  <section class="services" id="servicos">
-    <div class="service-card">
-      <h3>Pentest Profissional</h3>
-      <p>Simulações reais de ataques para identificar falhas de segurança nos seus sistemas, redes e aplicações.</p>
-    </div>
-    <div class="service-card">
-      <h3>Scan de Vulnerabilidades</h3>
-      <p>Mapeamento automático de vulnerabilidades, com relatórios completos e recomendações de correção.</p>
-    </div>
-    <div class="service-card">
-      <h3>Consultoria em Segurança</h3>
-      <p>Orientamos sua empresa a implementar as melhores práticas de segurança da informação.</p>
-    </div>
-  </section>
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a ARNYTECH</h2>
+            <p>A ARNYTECH é uma empresa especializada em segurança da informação, com experiência no desenvolvimento de soluções completas para proteção digital. Atuamos com foco em testes de intrusão, varredura de vulnerabilidades, auditorias e análise de riscos, atendendo clientes de todos os portes em diversos segmentos.</p>
+            <p>Nossa equipe é formada por especialistas altamente qualificados, com certificações reconhecidas internacionalmente, como CEH, OSCP, CompTIA Security+ e CISSP. Com uma abordagem ética, estratégica e técnica, garantimos resultados que protegem o que realmente importa: os dados da sua empresa.</p>
+            <p>Valorizamos a confiança, a inovação e a excelência. Buscamos constantemente aprimorar nossas práticas para oferecer o que há de mais moderno em cibersegurança, garantindo conformidade com normas como LGPD, ISO 27001 e frameworks como NIST e MITRE ATT&CK.</p>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 ARNYTECH - Todos os direitos reservados. | contato@arnytech.com</p>
-  </footer>
+    <!-- Serviços -->
+    <section id="servicos" class="bg-dark">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-box h-100">
+                        <h4>Pentest Profissional</h4>
+                        <p>Testes de intrusão realizados por especialistas que simulam ataques reais, buscando identificar falhas em redes, sistemas, aplicações web, APIs e dispositivos. Entregamos relatórios executivos e técnicos, com evidências, recomendações e plano de ação.</p>
+                        <ul>
+                            <li>Caixa Preta (Black Box)</li>
+                            <li>Caixa Branca (White Box)</li>
+                            <li>Caixa Cinza (Gray Box)</li>
+                            <li>Pentest em Aplicações Web e Mobile</li>
+                            <li>Pentest Interno e Externo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box h-100">
+                        <h4>Scan de Vulnerabilidades</h4>
+                        <p>Utilização de ferramentas automatizadas para identificar vulnerabilidades conhecidas em sistemas operacionais, servidores, dispositivos de rede e aplicações.</p>
+                        <ul>
+                            <li>Scans Autenticados e Não Autenticados</li>
+                            <li>Classificação por criticidade (CVSS)</li>
+                            <li>Scan contínuo e sob demanda</li>
+                            <li>Detecção de falhas de configuração e segurança</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box h-100">
+                        <h4>Consultoria em Segurança</h4>
+                        <p>Planejamento, implementação e revisão de políticas de segurança, resposta a incidentes, estruturação de ambientes seguros e adequação à LGPD, ISO, NIST e frameworks internacionais.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-box h-100">
+                        <h4>Treinamentos e Capacitação</h4>
+                        <p>Capacitação técnica e comportamental em cibersegurança para profissionais de TI, equipes de SOC e usuários em geral. Cursos presenciais e online, adaptados à realidade da empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes -->
+    <section id="clientes">
+        <div class="container">
+            <h2 class="section-title">Nossos Clientes</h2>
+            <p>Organizações de diferentes setores que confiam na ARNYTECH para garantir a segurança de seus dados e operações digitais:</p>
+            <ul>
+                <li>Empresa Alfa Tecnologia</li>
+                <li>Grupo Beta Financeiro</li>
+                <li>Hospital Gama Saúde</li>
+                <li>Instituto Delta Educacional</li>
+                <li>Startup Epsilon Digital</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="container text-center">
+            <h2 class="section-title">Fale Conosco</h2>
+            <p><strong>Email:</strong> <a href="mailto:contato@arnytech.com.br" class="text-success">contato@arnytech.com.br</a></p>
+            <p><strong>Telefone:</strong> <a href="tel:+5511999999999" class="text-success">(11) 99999-9999</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/arnytech" class="text-success" target="_blank">linkedin.com/company/arnytech</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ARNYTECH. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
+
 </html>
